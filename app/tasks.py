@@ -43,7 +43,7 @@ def backup_send_email():
                 stdout=buf)
     
     buf.seek(0)
-    with open(filebackup, 'w') as f:
+    with open(filebackup, 'w', encoding='utf-8') as f:
         f.write(buf.read())
 
     subject = f' Email with Attached Backup File - {datetime.date.today()} '
