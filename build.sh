@@ -6,4 +6,4 @@ pip install --upgrade pip setuptools
 pip install -r requirements.txt
 python manage.py collectstatic --no-input
 python manage.py migrate
-celery -A core beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
+celery -A core beat --scheduler django_celery_beat.schedulers:DatabaseScheduler &
